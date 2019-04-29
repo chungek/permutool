@@ -43,10 +43,6 @@ if __name__ == '__main__':
         except ValueError:
             print("running...")
         all_unique_permutations = permutations(user_str) 
-        # append to list if a permutation passes the check
-        valid_words = []
         for x in range(len(all_unique_permutations)):
             if all_unique_permutations[x] in english_dictionary:
-                valid_words.append(all_unique_permutations[x])
-        for y in range(len(valid_words)):
-            print(valid_words[y])
+                print(all_unique_permutations[x])
