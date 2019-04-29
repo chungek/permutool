@@ -5,7 +5,7 @@ def build_dictionary():
 
 # permutes a string
 def permutations(str):
-    runs_tracker = _build_frequency_count(str)
+    runs_tracker = _set_up(str)
     output = []
     _permute(runs_tracker, "", len(str), output)
     return output
@@ -25,7 +25,7 @@ def _permute(runs_tracker, permuted_segment, remainder, output):
             runs_tracker[curr_char] = runs_left 
 
 # helper function
-def _build_frequency_count(str):
+def _set_up(str):
     runs_tracker = {}
     for c in str:
         if c not in runs_tracker:
