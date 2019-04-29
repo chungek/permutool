@@ -1,3 +1,8 @@
+#loads .txt file containing all english words into main mem
+def build_dictionary():
+    dictionary_file = open("all_words.txt")
+    return set(dictionary_file.read().split())
+
 # permutes a string
 def permutations(str):
     runs_tracker = _build_frequency_count(str)
@@ -27,11 +32,6 @@ def _build_frequency_count(str):
             runs_tracker[c] = 0
         runs_tracker[c] += 1
     return runs_tracker
-
-#loads .txt file containing all english words into main mem
-def build_dictionary():
-    dictionary_file = open("all_words.txt")
-    return set(dictionary_file.read().split())
 
 # driver
 if __name__ == '__main__':
