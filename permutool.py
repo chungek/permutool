@@ -1,4 +1,4 @@
-#loads .txt file containing all english words into main mem
+#loads .txt file containing all english words into main memory
 def build_dictionary():
     dictionary_file = open("all_words.txt")
     return set(dictionary_file.read().split())
