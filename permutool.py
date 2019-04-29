@@ -48,5 +48,5 @@ if __name__ == '__main__':
         for x in range(len(all_unique_permutations)):
             if all_unique_permutations[x] in english_dictionary:
                 valid_words.append(all_unique_permutations[x])
-        for x in range(len(valid_words)):
-            print(valid_words[x])
+        for y in range(len(valid_words)):
+            print(valid_words[y])
