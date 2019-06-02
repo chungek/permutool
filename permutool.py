@@ -17,37 +17,6 @@ def permutations(string, all_perms, step = 0):
         # recurse over the postfix of the string that hasn't been permuted
         permutations(copy, all_perms, step + 1)
 
-# # old recursive permutation that would run out of mem for long strings
-# # permutes a string
-# def permutations(str):
-#     runs_tracker = _set_up(str)
-#     output = []
-#     _permute(runs_tracker, "", len(str), output)
-#     return output
-
-# # helper function
-# def _permute(runs_tracker, permuted_segment, remainder, output):
-#     # base case
-#     if remainder == 0:
-#         output.append(permuted_segment)
-#         return
-#     # run on remaining chars that follow
-#     for curr_char in runs_tracker.keys(): 
-#         runs_left = runs_tracker[curr_char]
-#         if runs_left > 0:
-#             runs_tracker[curr_char] -= 1
-#             _permute(runs_tracker, permuted_segment + curr_char, remainder - 1, output)
-#             runs_tracker[curr_char] = runs_left 
-
-# # helper function
-# def _set_up(str):
-#     runs_tracker = {}
-#     for c in str:
-#         if c not in runs_tracker:
-#             runs_tracker[c] = 0
-#         runs_tracker[c] += 1
-#     return runs_tracker
-
 # driver
 if __name__ == '__main__':
     english_dictionary = build_dictionary()
